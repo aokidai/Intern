@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bài mẩu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head>
+<script>
+	const users = ["Admin", "UserA", "UserB"];
+	const pass = ["Admin", "1234", "4231"];
+	function checkLogin(){
+		if(document.frmLogin.txtusername.value==""){
+			alert("Nhap username!");
+			document.form.txtUsername.focus();
+			return;
+		}
+		if(document.frmLogin.txtpassword.value==""){
+			alert("Nhap password!");
+			document.form.txtPassword.focus();
+			return;
+		}
+		
+		let ulen = users.length;
+		let plen = pass.length;
+		let tmp=-1;
+		for(i = 0; i<ulen; i++){
+			if(document.frmLogin.txtusername.value==users[i])
+			{
+				for(y = 0; y<plen; y++){
+					if(document.frmLogin.txtpassword.value==pass[y]){
+						alert("Đúng tài khoản mật khẩu");				tmp=0;
+					}
+				}
+			}
+			
+		}
+		if(tmp==-1)
+			alert("Sai tài khoản mật khẩu");
+	}
+</script>
+
+<body>
+	<h1 id="title">Mẩu đăng nhập sử dụng JS, HTML5, CSS</h1>
+	<section>
+		<form id="form1" name="frmLogin" method="post" action="login.php">
+		  <table id="tab"align="center">
+			<tbody>
+			  <tr>
+				<td colspan="2" align="center">Đăng nhập</td>
+			  </tr>
+			  <tr align="center">
+				<td width="136">Tài khoản:</td>
+				<td width="249"><input type="text" name="txtusername" id="textfield"></td>
+			  </tr>
+			  <tr align="center">
+				<td>Mật khẩu:</td>
+				<td><input type="password" name="txtpassword" id="textfield2"></td>
+			  </tr>
+			  <tr align="center">
+				<td colspan="2"><input type="button" name="button" id="button" value="Đăng nhập" onClick="checkLogin()">
+				<input type="reset" name="reset" id="reset" value="Làm lại"></td>
+			  </tr>
+			</tbody>
+		  </table>
+		</form>
+	</section>
+	<footer>
+		<div>Tên đăng nhập là Admin, UserA, UserB; Mật khẩu dùng chung là Admin, 1234, 4231.</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* Scss Document */
+#title {
+  text-align: center;
+  color: red;
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+
+#tab tr td {
+  boder: 1px solid black;
+  border-radius: 10px;
+  width: 401px;
+  margin-top: 20px;
+}
+
+#button {
+  background: red;
+  color: while;
+  boder: none;
+  border-radius: 10px;
+}
+
+#reset {
+  background: green;
+  color: while;
+  boder: none;
+  border-radius: 10px;
+}
+
+footer {
+  margin-top: 5%;
+  background-color: yellow;
+}
+footer div {
+  text-align: center;
+  color: black;
+}
+
+/*# sourceMappingURL=index.css.map */

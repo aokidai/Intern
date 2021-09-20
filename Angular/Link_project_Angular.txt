@@ -1,0 +1,5 @@
+Angular link project
+- Editor URL:
+https://stackblitz.com/edit/angular-wdqy58?file=src/app/product-details/product-details.component.html
+- Application URL:
+https://angular-wdqy58.stackblitz.io

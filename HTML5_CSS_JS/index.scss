@@ -1,0 +1,39 @@
+/* Scss Document */
+@mixin theme($theme: red, $text: while){
+	background: $theme;
+	color: $text;
+}
+@mixin table($tab: none){
+	boder: $tab;
+	border-radius: 10px;
+}
+#title{
+	text-align: center;
+	color: red;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+#tab {
+	tr {
+		td {
+			@include table($tab: 1px solid  black);
+			width: 401px;
+			margin-top: 20px;
+		}
+	}
+}
+#button{
+	@include theme;
+	@include table;
+}
+#reset{
+	@include theme($theme: green);
+	@include table;
+}
+footer {
+	margin-top: 5%;
+	background-color: yellow;
+	div {
+		text-align: center;
+		color: black;
+	}
+}
